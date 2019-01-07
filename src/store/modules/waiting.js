@@ -24,7 +24,7 @@ export default handleActions(
     }),
     [CREATE]: (state, action) => ({
       ...state,
-      list: state.list.contact({
+      list: state.list.concat({
         id: action.payload.id,
         name: action.payload.text,
         entered: false,
