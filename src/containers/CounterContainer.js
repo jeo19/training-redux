@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { increment, decrement } from '../store/modules/counter';
 import Counter from '../components/Counter';
 import { connect } from 'react-redux';
@@ -26,8 +25,7 @@ const mapStateToProps = ({ counter }) => ({
   color: counter.color,
   number: counter.number,
 });
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ increment, decrement }, dispatch);
+const mapDispatchToProps = { increment, decrement };
 export default connect(
   mapStateToProps,
   mapDispatchToProps
