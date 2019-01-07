@@ -23,8 +23,8 @@ const WaitingList = ({ waitingList, onEnter, onLeave }) => {
       </form>
       <ul>
         <WaitingItem text="Jhon" entered />
-        <WaitingItem text="maria" />
-        <WaitingItem text="Robert" />
+        <WaitingItem text="Maria" />
+        <WaitingItem text="Thomas" />
       </ul>
     </div>
   );
