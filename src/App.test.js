@@ -15,41 +15,8 @@ describe('App', () => {
     ReactDOM.render(<App />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
-  it('has a valid snapshot', () => {
+  test('has a valid snapshot', () => {
     const component = renderer.create(<App />);
-    let tree = component.toJson();
-    expect(tree).toMatchSnapshot();
-  });
-});
-describe('PaleteContainer', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<PaletteContainer />, div);
-  });
-  it('has a valid snapshot', () => {
-    const component = renderer.create(<PaletteContainer />);
-    let tree = component.toJson();
-    expect(tree).toMatchSnapshot();
-  });
-});
-describe('CounterContainer', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<CounterContainer />, div);
-  });
-  it('has a valid snapshot', () => {
-    const component = renderer.create(<CounterContainer />);
-    let tree = component.toJson();
-    expect(tree).toMatchSnapshot();
-  });
-});
-describe('WaitingListContainer', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<WaitingListContainer />, div);
-  });
-  it('has a valid snapshot', () => {
-    const component = renderer.create(<WaitingListContainer />);
     let tree = component.toJson();
     expect(tree).toMatchSnapshot();
   });
