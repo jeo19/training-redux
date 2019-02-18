@@ -6,18 +6,13 @@ import App, {
   CounterContainer,
   WaitingListContainer,
 } from './App';
-import Enzyme from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 describe('App', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
-    ReactDOM.unmountComponentAtNode(div);
-  });
-  test('has a valid snapshot', () => {
-    const component = renderer.create(<App />);
-    let tree = component.toJson();
-    expect(tree).toMatchSnapshot();
+    let wrapper;
+    wrapper = shallow(<App />);
+    expect(wrapper.length).toEqual(1);
   });
 });
