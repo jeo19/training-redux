@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { increment, decrement } from '../store/modules/counter';
 import Counter from '../components/Counter';
 import { connect } from 'react-redux';
-class CounterContainer extends Component {
+export class CounterContainer extends Component {
   handleIncrement = () => {
     this.props.increment();
   };

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as waitingActions from '../store/modules/waiting';
 import WaitingList from '../components/WaitingList';
-class WaitingListContainer extends Component {
+export class WaitingListContainer extends Component {
   handleChange = e => {
     const { WaitingActions } = this.props;
     WaitingActions.changeInput(e.target.value);

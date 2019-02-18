@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Palette from '../components/Palette';
 import { changeColor } from '../store/modules/counter';
-class PaletteContainer extends Component {
+export class PaletteContainer extends Component {
   handleSelect = color => {
     const { changeColor } = this.props;
     console.log('what');
